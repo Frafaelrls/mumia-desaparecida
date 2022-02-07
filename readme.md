@@ -55,7 +55,7 @@ Páginas que são desenvolvidas sem a interação com o usuário.
     <summary>
         <big>
             <strong>
-                Livros da Serie Agora Você decide - Infantil
+                Livros da serie 'Agora Você Decide' - Infantil
             </strong>
         </big>
     </summary>
