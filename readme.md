@@ -13,7 +13,7 @@ livros que trabalha com a possibilidade de escolha dos caminhos seguidos pelos
 personagens e apresentando histórias e finais diferentes.
 
 
-###Objetivo do projeto
+### Objetivo do projeto
 
 Adaptar o livro para a linguagem de programação `Python` com o objetivo de
 aprimorar os conhecimentos na programação de tomadas de decisões com a 
