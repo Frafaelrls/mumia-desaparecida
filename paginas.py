@@ -49,14 +49,6 @@ def pagina_06():
     return
 
 
-def pagina_07():
-    print(f"Texto da página 07")
-    with open(r'txt\pagina 07.txt', 'r', encoding='utf-8') as pagina_07X:
-        pagina = pagina_07X.read()
-        print(pagina)
-    return
-
-
 def pagina_08():
     print(f"Texto da página 08")
     with open(r'txt\pagina 08.txt', 'r', encoding='utf-8') as pagina_08X:
@@ -77,14 +69,6 @@ def pagina_10():
     print(f"Texto da página 10")
     with open(r'txt\pagina 10.txt', 'r', encoding='utf-8') as pagina_10X:
         pagina = pagina_10X.read()
-        print(pagina)
-    return
-
-
-def pagina_11():
-    print(f"Texto da página 11")
-    with open(r'txt\pagina 11.txt', 'r', encoding='utf-8') as pagina_11X:
-        pagina = pagina_11X.read()
         print(pagina)
     return
 
@@ -125,14 +109,6 @@ def pagina_16():
     print(f"Texto da página 16")
     with open(r'txt\pagina 16.txt', 'r', encoding='utf-8') as pagina_16X:
         pagina = pagina_16X.read()
-        print(pagina)
-    return
-
-
-def pagina_17():
-    print(f"Texto da página 17")
-    with open(r'txt\pagina 17.txt', 'r', encoding='utf-8') as pagina_17X:
-        pagina = pagina_17X.read()
         print(pagina)
     return
 
@@ -193,14 +169,6 @@ def pagina_25():
     return
 
 
-def pagina_26():
-    print(f"Texto da página 26")
-    with open(r'txt\pagina 26.txt', 'r', encoding='utf-8') as pagina_26X:
-        pagina = pagina_26X.read()
-        print(pagina)
-    return
-
-
 def pagina_27():
     print(f"Texto da página 27")
     with open(r'txt\pagina 27.txt', 'r', encoding='utf-8') as pagina_27X:
@@ -233,5 +201,30 @@ def pagina_30():
     return
 
 
+"""
 pagina_01()
 pagina_02()
+pagina_03()
+pagina_04()
+pagina_05()
+pagina_06()
+pagina_08()
+pagina_09()
+pagina_10()
+pagina_12()
+pagina_13()
+pagina_14()
+pagina_15()
+pagina_16()
+pagina_19()
+pagina_20()
+pagina_21()
+pagina_22()
+pagina_23()
+pagina_24()
+pagina_25()
+pagina_27()
+pagina_28()
+pagina_29()
+pagina_30()
+"""
