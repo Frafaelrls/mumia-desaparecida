@@ -1,5 +1,6 @@
 import time
 import os
+import paginas
 
 introducao = "O mistério da Múmia Desaparecida\n\n" \
          "Você está prestes a iniciar a leitura de um livro " \
@@ -16,7 +17,8 @@ resposta = input()
 resposta = resposta.lower()
 if resposta == "sim":
     print("Que a ventura comesse.\n")
-    print("INICIA O LIVRO")
+    time.sleep(0.5)
+    paginas.pagina_01()
     os.system("pause")
 else:
     print("Volte quando tiver mais XP\n")
