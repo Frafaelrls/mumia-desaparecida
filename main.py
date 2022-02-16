@@ -2,11 +2,17 @@ import time
 import os
 import paginas
 
-introducao = "O mistério da Múmia Desaparecida\n\n" \
-         "Você está prestes a iniciar a leitura de um livro " \
-         "interativo.\nSaiba que suas escolhas trarão consequências.\nVocê " \
-         "possui nível suficiente para essa aventura?\n\n"\
-         "Digite Sim para iniciar, digite Não se precisar de mais XP.\n"
+titulo = "O mistério da Múmia Desaparecida\n"
+introducao = """
+Você está prestes a iniciar a leitura de um livro interativo.
+Saiba que suas escolhas trarão consequências.
+Você possui nível suficiente para essa aventura?
+Digite Sim para iniciar, digite Não se precisar de mais XP.
+"""
+
+for letra in titulo:
+    time.sleep(0.08)
+    print(letra, end='', flush=True)
 
 for letra in introducao:
     time.sleep(0.08)
