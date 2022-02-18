@@ -9,7 +9,7 @@ def pagina_01():
     with open(r'txt\pagina 01.txt', 'r', encoding='utf-8') as pagina_01X:
         pagina = pagina_01X.read()
         for palavra in pagina:
-            time.sleep(0.08)
+            time.sleep(0.0)  # todo tempo zerado para teste
             print(palavra, end='', flush=True)
     return
 
