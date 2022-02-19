@@ -38,10 +38,12 @@ def leitura():
         # Caminho Concluído
         caminho_01()
     else:
+        # Caminho concluído
         caminho_02()
     return
 
 
+# Caminho concluído
 def caminho_01():
     apagar()
     paginas.pagina_05()
@@ -65,6 +67,16 @@ def caminho_01():
 
 def caminho_02():
     paginas.pagina_19()
+    os.system('pause')
+    interacao = input('Se você deseja ficar digite, ficar\n'
+                      'Se você deseja sair digite, sair\n')
+    interacao = interacao.lower()
+    if interacao == 'ficar':
+        # Caminho concluído
+        caminho_19()
+    else:
+        # Caminho concluído
+        caminho_20()
     return
 
 
@@ -298,6 +310,90 @@ def caminho_17():
 # Caminho concluído
 def caminho_18():
     paginas.pagina_36()
+    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
+          'Reinicie o jogo para se aventurar com outras possibilidades.')
+    os.system('pause')
+    apagar()
+    return
+
+
+# Caminho concluído
+def caminho_19():
+    paginas.pagina_04()
+    os.system('pause')
+    paginas.pagina_27()
+    os.system('pause')
+    paginas.pagina_28()
+    os.system('pause')
+    paginas.pagina_29()
+    os.system('pause')
+    paginas.pagina_30()
+    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
+          'Reinicie o jogo para se aventurar com outras possibilidades.')
+    os.system('pause')
+    apagar()
+    return
+
+
+def caminho_20():
+    paginas.pagina_37()
+    interacao = input('Se você deseja continuar correndo, digite: correr\n'
+                      'Se você deseja ver quem está de seguindo, digite: '
+                      'Olhar\n')
+    interacao = interacao.lower()
+    if interacao == 'correr':
+        # Caminho concluído
+        caminho_21()
+    else:
+        # Caminho concluído
+        caminho_22()
+    return
+
+
+# Caminho concluído
+def caminho_21():
+    paginas.pagina_38()
+    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
+          'Reinicie o jogo para se aventurar com outras possibilidades.')
+    os.system('pause')
+    apagar()
+    return
+
+
+def caminho_22():
+    paginas.pagina_40()
+    os.system('pause')
+    paginas.pagina_42()
+    interacao = input('Se você acha que vai ser ouvido, digite: Sim\n'
+                      'Se você acha que não vai ser ouvido, Digite: Não\n')
+    interacao = interacao.lower()
+
+    if interacao == 'sim':
+        # Caminho concluído
+        caminho_23()
+    else:
+        # Caminho concluído
+        caminho_24()
+    return
+
+
+# Caminho concluído
+def caminho_23():
+    paginas.pagina_48()
+    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
+          'Reinicie o jogo para se aventurar com outras possibilidades.')
+    os.system('pause')
+    apagar()
+    return
+
+
+# Caminho concluído
+def caminho_24():
+    paginas.pagina_49()
+    os.system('pause')
+    paginas.pagina_50()
+    os.system('pause')
+    paginas.pagina_57()
     print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
           'Reinicie o jogo para se aventurar com outras possibilidades.')
     os.system('pause')
