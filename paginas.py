@@ -398,6 +398,15 @@ def pagina_57():
     return
 
 
+def pagina_58():
+    print('Texto provisório da página 58\n'
+          'Devera ter um labirinto interativo aqui.\n'
+          'Existe dois finais nele.\n'
+          'O primeiro é o tesouro.\n'
+          'o segundo é o beco sem saída.\n')
+    return
+
+
 """
 pagina_02()
 pagina_03()
