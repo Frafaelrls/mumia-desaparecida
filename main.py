@@ -1,6 +1,8 @@
 import time
 import os
 import logica
+
+
 titulo = "O mistério da Múmia Desaparecida\n"
 introducao = """
 Você está prestes a iniciar a leitura de um livro interativo.
@@ -21,10 +23,10 @@ for letra in introducao:
 resposta = input()
 resposta = resposta.lower()
 if resposta == "sim":
-    print("Que a ventura comesse.\n")
+    print("Que as aventuras comecem.\n")
     time.sleep(0.0)  # todo tempo zerado para teste
-    logica.leitura()
     os.system("pause")
+    logica.leitura()
 else:
     print("Volte quando tiver mais XP\n")
     print("FECHA O LIVRO")
