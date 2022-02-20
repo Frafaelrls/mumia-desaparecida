@@ -21,14 +21,8 @@ def apagar():
 
 def leitura():
     paginas.pagina_01()
-    os.system('pause')
-    apagar()
     paginas.pagina_02()
-    os.system('pause')
-    apagar()
     paginas.pagina_03()
-    os.system('pause')
-    apagar()
     interacao = input("Se você deseja ir atrás do guarda escreva: Seguir\n\n"
                       "Se você deseja espiar atrás da cortina escreva: "
                       "Espiar\n")
@@ -45,13 +39,9 @@ def leitura():
 
 # Caminho concluído
 def caminho_01():
-    apagar()
     paginas.pagina_05()
-    os.system('pause')
     paginas.pagina_06()
-    os.system('pause')
     paginas.pagina_08()
-    os.system('pause')
     interacao = input("Se você for chamar a polícia, escreva: Policia\n\n"
                       "Se você resolver perseguir o Farrel, escreva: "
                       "Seguir\n")
@@ -67,7 +57,6 @@ def caminho_01():
 
 def caminho_02():
     paginas.pagina_19()
-    os.system('pause')
     interacao = input('Se você deseja ficar digite, ficar\n'
                       'Se você deseja sair digite, sair\n')
     interacao = interacao.lower()
@@ -82,10 +71,7 @@ def caminho_02():
 
 def caminho_03():
     paginas.pagina_34()
-    os.system('pause')
     paginas.pagina_35()
-    os.system('pause')
-    apagar()
     interacao = input('Se você deseja mostrar o bilhete para Dona Teca, '
                       'digite: Mostrar\n\n'
                       'Se você quer guardar segredo, digite: segredo\n')
@@ -102,10 +88,7 @@ def caminho_03():
 # Caminho concluído
 def caminho_04():
     paginas.pagina_14()
-    os.system('pause')
     paginas.pagina_15()
-    os.system('pause')
-    apagar()
     interacao = input('Se você deseja perseguir Farrel, digite: Seguir\n\n'
                       'Se você deseja ajudar o velho, digite: Ajudar\n')
     interacao = interacao.lower()
@@ -122,14 +105,11 @@ def caminho_04():
 # Caminho concluído
 def caminho_05():
     paginas.pagina_43()
-    os.system('pause')
     paginas.pagina_32()
-    os.system('pause')
     paginas.pagina_33()
-    os.system('pause')
-    apagar()
     print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
           'Reinicie o jogo para se aventurar com outras possibilidades.')
+    os.system('pause')
     apagar()
     return
 
@@ -137,12 +117,10 @@ def caminho_05():
 # Caminho concluído
 def caminho_06():
     paginas.pagina_20()
-    os.system('pause')
     paginas.pagina_21()
-    os.system('pause')
-    apagar()
     print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
           'Reinicie o jogo para se aventurar com outras possibilidades.')
+    os.system('pause')
     apagar()
     return
 
@@ -150,20 +128,16 @@ def caminho_06():
 # Caminho concluído
 def caminho_07():
     paginas.pagina_10()
-    os.system('pause')
     paginas.pagina_12()
-    os.system('pause')
-    apagar()
     print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
           'Reinicie o jogo para se aventurar com outras possibilidades.')
+    os.system('pause')
     apagar()
     return
 
 
 def caminho_08():
     paginas.pagina_41()
-    os.system('pause')
-    apagar()
     interacao = input('Pegue uma moeda e jogue para o alto e agarre ela e'
                       'veja o resultado\nDeu cara ou coroa?\n')
     interacao = interacao.lower()
@@ -179,9 +153,7 @@ def caminho_08():
 
 def caminho_09():
     paginas.pagina_44()
-    os.system('pause')
     paginas.pagina_45()
-    os.system('pause')
     paginas.pagina_46()
     intercao = input('Você decide deixar suas coisa e ir atrás do homem '
                      'alto? digite, deixar\nVocê decide recolher suas '
@@ -213,7 +185,6 @@ def caminho_10():
 # Caminho concluído
 def caminho_11():
     paginas.pagina_13()
-    os.system('pause')
     interacao = input('O primeiro desenho é a cruz Egípcia\nO '
                       'segundo é o urubu\n Qual você escolhe? Cruz ou '
                       'Urubu.\n')
@@ -229,15 +200,13 @@ def caminho_11():
 # Caminho concluído
 def caminho_12():
     paginas.pagina_52()
-    os.system('pause')
     paginas.pagina_53()
-    os.system('pause')
     paginas.pagina_54()
-    os.system('pause')
     paginas.pagina_56()
     apagar()
     print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
           'Reinicie o jogo para se aventurar com outras possibilidades.')
+    os.system('pause')
     apagar()
     return
 
@@ -245,10 +214,10 @@ def caminho_12():
 # Caminho concluído
 def caminho_13():
     paginas.pagina_39()
-    os.system('pause')
     apagar()
     print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
           'Reinicie o jogo para se aventurar com outras possibilidades.')
+    os.system('pause')
     apagar()
     return
 
@@ -256,7 +225,6 @@ def caminho_13():
 # Caminho concluído
 def caminho_14():
     paginas.pagina_22()
-    os.system('pause')
     paginas.pagina_23()
     apagar()
     print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
@@ -269,6 +237,7 @@ def caminho_14():
 # Caminho concluído
 def caminho_15():
     paginas.pagina_16()
+    apagar()
     print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
           'Reinicie o jogo para se aventurar com outras possibilidades.')
     os.system('pause')
@@ -279,9 +248,7 @@ def caminho_15():
 # Caminho concluído
 def caminho_16():
     paginas.pagina_24()
-    os.system('pause')
     paginas.pagina_25()
-    os.system('pause')
     paginas.pagina_58()
     interacao = input('Se você chegou no tesouro digite, tesouro.\n'
                       'Se você chegou no beco sem saída digite, beco.\n')
@@ -310,6 +277,7 @@ def caminho_17():
 # Caminho concluído
 def caminho_18():
     paginas.pagina_36()
+    apagar()
     print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
           'Reinicie o jogo para se aventurar com outras possibilidades.')
     os.system('pause')
@@ -320,14 +288,11 @@ def caminho_18():
 # Caminho concluído
 def caminho_19():
     paginas.pagina_04()
-    os.system('pause')
     paginas.pagina_27()
-    os.system('pause')
     paginas.pagina_28()
-    os.system('pause')
     paginas.pagina_29()
-    os.system('pause')
     paginas.pagina_30()
+    apagar()
     print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
           'Reinicie o jogo para se aventurar com outras possibilidades.')
     os.system('pause')
@@ -362,7 +327,6 @@ def caminho_21():
 
 def caminho_22():
     paginas.pagina_40()
-    os.system('pause')
     paginas.pagina_42()
     interacao = input('Se você acha que vai ser ouvido, digite: Sim\n'
                       'Se você acha que não vai ser ouvido, Digite: Não\n')
@@ -390,9 +354,7 @@ def caminho_23():
 # Caminho concluído
 def caminho_24():
     paginas.pagina_49()
-    os.system('pause')
     paginas.pagina_50()
-    os.system('pause')
     paginas.pagina_57()
     print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
           'Reinicie o jogo para se aventurar com outras possibilidades.')
