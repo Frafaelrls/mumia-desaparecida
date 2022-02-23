@@ -5,7 +5,7 @@
 """
 import os
 import paginas
-
+# Biblioteca Fore não é nativa do sistema
 from colorama import Fore
 
 
@@ -79,8 +79,10 @@ def caminho_03():
     paginas.texto(34)
     paginas.texto(35)
     interacao = input('\nSe você deseja mostrar o bilhete para Dona Teca, '
-                      'digite: Mostrar\n\n'
-                      'Se você quer guardar segredo, digite: segredo\n')
+                      'digite:'
+                      + Fore.GREEN + ' Mostrar\n\n' + Fore.RESET
+                      + 'Se você quer guardar segredo, digite:'
+                      + Fore.RED + 'Segredo\n' + Fore.RESET)
     interacao = interacao.lower()
     if interacao == 'mostrar':
         # Caminho concluído
@@ -95,8 +97,10 @@ def caminho_03():
 def caminho_04():
     paginas.texto(14)
     paginas.texto(15)
-    interacao = input('\nSe você deseja perseguir Farrel, digite: Seguir\n\n'
-                      'Se você deseja ajudar o velho, digite: Ajudar\n')
+    interacao = input('\nSe você deseja perseguir Farrel, digite: '
+                      + Fore.GREEN + 'Seguir\n\n' + Fore.RESET
+                      + 'Se você deseja ajudar o velho, digite: '
+                      + Fore.RED + 'Ajudar\n' + Fore.RESET)
     interacao = interacao.lower()
 
     if interacao == 'seguir':
@@ -148,7 +152,10 @@ def caminho_07():
 def caminho_08():
     paginas.texto(41)
     interacao = input('\nPegue uma moeda e jogue para o alto e agarre ela e'
-                      'veja o resultado\n\nDeu cara ou coroa?\n')
+                      'veja o resultado\n\nDeu '
+                      + Fore.RED + 'cara ' + Fore.RESET
+                      + 'ou'
+                      + Fore.GREEN + ' coroa?\n' + Fore.RESET)
     interacao = interacao.lower()
 
     if interacao == 'cara':
@@ -165,8 +172,10 @@ def caminho_09():
     paginas.texto(45)
     paginas.texto(46)
     intercao = input('\nVocê decide deixar suas coisa e ir atrás do homem '
-                     'alto? digite, deixar\n\nVocê decide recolher suas '
-                     'coisas? digite, recolher\n')
+                     'alto? digite, '
+                     + Fore.GREEN + 'deixar\n\n' + Fore.RESET
+                     + 'Você decide recolher suas coisas? digite, '
+                     + Fore.RED + 'recolher\n' + Fore.RESET)
     intercao = intercao.lower()
     if intercao == 'deixar':
         # Caminho concluído
@@ -179,8 +188,10 @@ def caminho_09():
 
 def caminho_10():
     paginas.texto(9)
-    interacao = input('\nSe quiser abrir digite sim, de quiser deixar fechada '
-                      'digite não.')
+    interacao = input('\nSe quiser abrir digite '
+                      + Fore.GREEN + 'sim' + Fore.RESET
+                      + ', se quiser deixar fechada digite '
+                      + Fore.RED + 'não.' + Fore.RESET)
     interacao = interacao.lower()
     if interacao == 'sim':
         # Caminho concluído
@@ -195,8 +206,10 @@ def caminho_10():
 def caminho_11():
     paginas.texto(13)
     interacao = input('\nO primeiro desenho é a cruz Egípcia\nO '
-                      'segundo é o urubu\n Qual você escolhe? Cruz ou '
-                      'Urubu.\n')
+                      'segundo é o urubu\n Qual você escolhe? '
+                      + Fore.RED + 'Cruz ' + Fore.RESET
+                      + 'ou '
+                      + Fore.GREEN + 'Urubu.\n' + Fore.RESET)
     interacao = interacao.lower()
     if interacao == 'cruz':
         # Caminho concluído
@@ -260,8 +273,10 @@ def caminho_16():
     print('\n')
     paginas.texto(25)
     paginas.texto(58)
-    interacao = input('\nSe você chegou no tesouro digite, tesouro.\n'
-                      'Se você chegou no beco sem saída digite, beco.\n')
+    interacao = input('\nSe você chegou no tesouro digite, '
+                      + Fore.RED + 'tesouro.\n' + Fore.RESET
+                      + 'Se você chegou no beco sem saída digite, '
+                      + Fore.GREEN + 'beco.\n' + Fore.RESET)
     interacao = interacao.lower()
 
     if interacao == 'tesouro':
@@ -312,9 +327,10 @@ def caminho_19():
 
 def caminho_20():
     paginas.texto(37)
-    interacao = input('\nSe você deseja continuar correndo, digite: correr\n'
-                      'Se você deseja ver quem está de seguindo, digite: '
-                      'Olhar\n')
+    interacao = input('\nSe você deseja continuar correndo, digite: '
+                      + Fore.GREEN + 'correr\n' + Fore.RESET
+                      + 'Se você deseja ver quem está de seguindo, digite: '
+                      + Fore.RED + 'Olhar\n' + Fore.RESET)
     interacao = interacao.lower()
     if interacao == 'correr':
         # Caminho concluído
@@ -338,8 +354,10 @@ def caminho_21():
 def caminho_22():
     paginas.texto(40)
     paginas.texto(42)
-    interacao = input('\nSe você acha que vai ser ouvido, digite: Sim\n'
-                      'Se você acha que não vai ser ouvido, Digite: Não\n')
+    interacao = input('\nSe você acha que vai ser ouvido, digite: '
+                      + Fore.GREEN + 'Sim\n' + Fore.RESET
+                      + 'Se você acha que não vai ser ouvido, Digite: '
+                      + Fore.RED + 'Não\n' + Fore.RESET)
     interacao = interacao.lower()
 
     if interacao == 'sim':
