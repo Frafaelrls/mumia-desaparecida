@@ -3,7 +3,7 @@ import os
 import time
 
 
-def paginas(numero):
+def texto(numero):
     import logica
     logica.apagar()
     print(f"Texto da página {numero}")
