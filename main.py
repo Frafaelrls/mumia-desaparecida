@@ -36,8 +36,7 @@ while True:
             break
 
         else:
-            print('Você está em dúvida? digite sim ou não para iniciarmos')
-            os.system('pause')
+            print('Digite sim para iniciar ou não para fechar o livro.')
             continue
     except ValueError:
         print('Erro')
