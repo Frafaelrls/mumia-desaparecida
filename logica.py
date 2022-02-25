@@ -75,7 +75,7 @@ def caminho_01():
                               + "Se você resolver perseguir o Farrel, escreva:"
                               + Cores.verde + " Seguir\n" + Cores.reset)
             interacao = interacao.lower()
-            if interacao == 'policia' or 'polícia':
+            if interacao == 'policia' or interacao == 'polícia':
                 # Caminho concluído
                 caminho_03()
             elif interacao == 'seguir':
