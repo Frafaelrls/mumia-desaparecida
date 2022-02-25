@@ -52,7 +52,7 @@ def leitura():
                 # Caminho concluído
                 caminho_02()
             else:
-                print(f'Você escolheu {interacao}, esse não é um '
+                print(f'Você escolheu "{interacao}", esse não é um '
                       f'caminho valido :(\n'
                       f'Digite um caminho válido, escolha entre seguir ou '
                       f'espiar\n')
@@ -68,18 +68,27 @@ def caminho_01():
     paginas.texto(5)
     paginas.texto(6)
     paginas.texto(8)
-    interacao = input("\nSe você for chamar a polícia, escreva:"
-                      + Cores.vermelho + " Policia\n\n" + Cores.reset
-                      + "Se você resolver perseguir o Farrel, escreva:"
-                      + Cores.verde + " Seguir\n" + Cores.reset)
-    interacao = interacao.lower()
-    if interacao == 'policia':
-        # Caminho concluído
-        caminho_03()
-    else:
-        # Caminho concluído
-        caminho_04()
-    return
+    while True:
+        try:
+            interacao = input("\nSe você for chamar a polícia, escreva:"
+                              + Cores.vermelho + " Policia\n\n" + Cores.reset
+                              + "Se você resolver perseguir o Farrel, escreva:"
+                              + Cores.verde + " Seguir\n" + Cores.reset)
+            interacao = interacao.lower()
+            if interacao == 'policia' or 'polícia':
+                # Caminho concluído
+                caminho_03()
+            elif interacao == 'seguir':
+                # Caminho concluído
+                caminho_04()
+            else:
+                print(f'Você escolheu "{interacao}", esse não é um '
+                      f'caminho valido :(\n'
+                      f'Digite um caminho válido, escolha entre seguir ou '
+                      f'espiar\n')
+        except ValueError:
+            print('Erro')
+        return
 
 
 def caminho_02():
