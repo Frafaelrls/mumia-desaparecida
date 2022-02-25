@@ -35,19 +35,32 @@ def leitura():
     paginas.texto(1)
     paginas.texto(2)
     paginas.texto(3)
-    interacao = input("\nSe você deseja ir atrás do guarda escreva:"
-                      + Cores.verde + " Seguir\n\n" + Cores.reset
-                      + "Se você deseja espiar atrás da cortina escreva:"
-                      + Cores.vermelho + " Espiar\n" + Cores.reset)
-    interacao = interacao.lower()
+    while True:
+        try:
+            interacao = input("\nSe você deseja ir atrás do guarda escreva:"
+                              + Cores.verde + " Seguir\n\n" + Cores.reset
+                              + "Se você deseja espiar atrás da cortina "
+                                "escreva:"
+                              + Cores.vermelho + " Espiar\n" + Cores.reset)
+            interacao = interacao.lower()
 
-    if interacao == 'seguir':
-        # Caminho Concluído
-        caminho_01()
-    else:
-        # Caminho concluído
-        caminho_02()
-    return
+            if interacao == 'seguir':
+                # Caminho Concluído
+                caminho_01()
+
+            elif interacao == 'espiar':
+                # Caminho concluído
+                caminho_02()
+            else:
+                print(f'Você escolheu {interacao}, esse não é um '
+                      f'caminho valido :(\n'
+                      f'Digite um caminho válido, escolha entre seguir ou '
+                      f'espiar\n')
+                continue
+        except ValueError:
+            print('Erro')
+            break
+        return
 
 
 # Caminho concluído
