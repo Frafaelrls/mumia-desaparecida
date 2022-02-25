@@ -84,27 +84,40 @@ def caminho_01():
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
                       f'caminho valido :(\n'
-                      f'Digite um caminho válido, escolha entre seguir ou '
-                      f'espiar\n')
+                      f'Digite um caminho válido, escolha entre Polícia ou '
+                      f'Seguir\n')
+                continue
         except ValueError:
             print('Erro')
+            break
         return
 
 
 def caminho_02():
     paginas.texto(19)
-    interacao = input('\nSe você deseja ficar digite,'
-                      + Cores.vermelho + 'ficar\n\n' + Cores.reset
-                      + 'Se você deseja sair digite,'
-                      + Cores.verde + 'sair\n' + Cores.reset)
-    interacao = interacao.lower()
-    if interacao == 'ficar':
-        # Caminho concluído
-        caminho_19()
-    else:
-        # Caminho concluído
-        caminho_20()
-    return
+    while True:
+        try:
+            interacao = input('\nSe você deseja ficar digite,'
+                              + Cores.vermelho + 'Ficar\n\n' + Cores.reset
+                              + 'Se você deseja sair digite,'
+                              + Cores.verde + 'Sair\n' + Cores.reset)
+            interacao = interacao.lower()
+            if interacao == 'ficar':
+                # Caminho concluído
+                caminho_19()
+            elif interacao == 'sair':
+                # Caminho concluído
+                caminho_20()
+            else:
+                print(f'Você escolheu "{interacao}", esse não é um '
+                      f'caminho valido :(\n'
+                      f'Digite um caminho válido, escolha entre Ficar ou '
+                      f'Sair\n')
+                continue
+        except ValueError:
+            print('Erro')
+            break
+        return
 
 
 def caminho_03():
