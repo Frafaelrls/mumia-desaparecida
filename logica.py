@@ -71,7 +71,7 @@ def caminho_01():
     while True:
         try:
             interacao = input("\nSe você for chamar a polícia, escreva:"
-                              + Cores.vermelho + " Policia\n\n" + Cores.reset
+                              + Cores.vermelho + " Polícia\n\n" + Cores.reset
                               + "Se você resolver perseguir o Farrel, escreva:"
                               + Cores.verde + " Seguir\n" + Cores.reset)
             interacao = interacao.lower()
@@ -123,19 +123,29 @@ def caminho_02():
 def caminho_03():
     paginas.texto(34)
     paginas.texto(35)
-    interacao = input('\nSe você deseja mostrar o bilhete para Dona Teca, '
-                      'digite:'
-                      + Cores.verde + ' Mostrar\n\n' + Cores.reset
-                      + 'Se você quer guardar segredo, digite:'
-                      + Cores.vermelho + 'Segredo\n' + Cores.reset)
-    interacao = interacao.lower()
-    if interacao == 'mostrar':
-        # Caminho concluído
-        caminho_07()
-    else:
-        # Caminho concluído
-        caminho_08()
-    return
+    while True:
+        try:
+            interacao = input('\nSe você deseja mostrar o bilhete para Dona '
+                              'Teca, digite:'
+                              + Cores.verde + ' Mostrar\n\n' + Cores.reset
+                              + 'Se você quer guardar segredo, digite:'
+                              + Cores.vermelho + ' Segredo\n' + Cores.reset)
+            interacao = interacao.lower()
+            if interacao == 'mostrar':
+                # Caminho concluído
+                caminho_07()
+            elif interacao == 'segredo':
+                # Caminho concluído
+                caminho_08()
+            else:
+                print(f'Você escolheu "{interacao}", esse não é um '
+                      f'caminho valido :(\n'
+                      f'Digite um caminho válido, escolha entre Mostrar ou '
+                      f'Segredo\n')
+                continue
+        except ValueError:
+            print('Erro')
+        return
 
 
 # Caminho concluído
