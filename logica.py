@@ -38,11 +38,13 @@ def leitura():
     paginas.texto(3)
     while True:
         try:
-            interacao = input("\nSe você deseja ir atrás do guarda escreva:"
-                              + Cores.verde + " Seguir\n\n" + Cores.reset
-                              + "Se você deseja espiar atrás da cortina "
-                                "escreva:"
-                              + Cores.vermelho + " Espiar\n" + Cores.reset)
+            interacao = input("\nSe você deseja ir atrás do guarda escreva:" +
+                              Cores.verde + " Seguir\n\n" + Cores.reset +
+                              "Se você deseja espiar atrás da cortina "
+                              "escreva:" +
+                              Cores.vermelho + " Espiar\n\n" + Cores.reset +
+                              "Caso queira terminar a leitura escreva: " +
+                              Cores.vermelho + "Exit\n" + Cores.reset)
             interacao = interacao.lower()
 
             if interacao == 'seguir':
@@ -52,6 +54,9 @@ def leitura():
             elif interacao == 'espiar':
                 # Caminho concluído
                 caminho_02()
+                break
+            elif interacao == 'exit':
+                saida()
                 break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
@@ -72,11 +77,14 @@ def caminho_01():
     paginas.texto(8)
     while True:
         try:
-            interacao = input("\nSe você for chamar a polícia, escreva:"
-                              + Cores.vermelho + " Polícia\n\n" + Cores.reset
-                              + "Se você resolver perseguir o Farrel, escreva:"
-                              + Cores.verde + " Seguir\n" + Cores.reset)
+            interacao = input("\nSe você for chamar a polícia, escreva:" +
+                              Cores.vermelho + " Polícia\n\n" + Cores.reset +
+                              "Se você resolver perseguir o Farrel, escreva:" +
+                              Cores.verde + " Seguir\n\n" + Cores.reset +
+                              "Caso queira terminar a leitura escreva: " +
+                              Cores.vermelho + "Exit\n" + Cores.reset)
             interacao = interacao.lower()
+
             if interacao == 'policia' or interacao == 'polícia':
                 # Caminho concluído
                 caminho_03()
@@ -84,6 +92,9 @@ def caminho_01():
             elif interacao == 'seguir':
                 # Caminho concluído
                 caminho_04()
+                break
+            elif interacao == 'exit':
+                saida()
                 break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
@@ -101,11 +112,14 @@ def caminho_02():
     paginas.texto(19)
     while True:
         try:
-            interacao = input('\nSe você deseja ficar digite,'
-                              + Cores.vermelho + ' ficar\n\n' + Cores.reset
-                              + 'Se você deseja sair digite,'
-                              + Cores.verde + ' sair\n' + Cores.reset)
+            interacao = input('\nSe você deseja ficar digite,' +
+                              Cores.vermelho + ' ficar\n\n' + Cores.reset +
+                              'Se você deseja sair digite,' +
+                              Cores.verde + ' sair\n\n' + Cores.reset +
+                              "Caso queira terminar a leitura escreva: " +
+                              Cores.vermelho + "Exit\n" + Cores.reset)
             interacao = interacao.lower()
+
             if interacao == 'ficar':
                 # Caminho concluído
                 caminho_19()
@@ -113,6 +127,9 @@ def caminho_02():
             elif interacao == 'sair':
                 # Caminho concluído
                 caminho_20()
+                break
+            elif interacao == 'exit':
+                saida()
                 break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
@@ -132,11 +149,14 @@ def caminho_03():
     while True:
         try:
             interacao = input('\nSe você deseja mostrar o bilhete para Dona '
-                              'Teca, digite:'
-                              + Cores.verde + ' Mostrar\n\n' + Cores.reset
-                              + 'Se você quer guardar segredo, digite:'
-                              + Cores.vermelho + ' Segredo\n' + Cores.reset)
+                              'Teca, digite:' +
+                              Cores.verde + ' Mostrar\n\n' + Cores.reset +
+                              'Se você quer guardar segredo, digite:' +
+                              Cores.vermelho + ' Segredo\n\n' + Cores.reset +
+                              "Caso queira terminar a leitura escreva: " +
+                              Cores.vermelho + "Exit\n" + Cores.reset)
             interacao = interacao.lower()
+
             if interacao == 'mostrar':
                 # Caminho concluído
                 caminho_07()
@@ -144,6 +164,9 @@ def caminho_03():
             elif interacao == 'segredo':
                 # Caminho concluído
                 caminho_08()
+                break
+            elif interacao == 'exit':
+                saida()
                 break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
@@ -163,10 +186,12 @@ def caminho_04():
     paginas.texto(15)
     while True:
         try:
-            interacao = input('\nSe você deseja perseguir Farrel, digite: '
-                              + Cores.verde + 'Seguir\n\n' + Cores.reset
-                              + 'Se você deseja ajudar o velho, digite: '
-                              + Cores.vermelho + 'Ajudar\n' + Cores.reset)
+            interacao = input('\nSe você deseja perseguir Farrel, digite: ' +
+                              Cores.verde + 'Seguir\n\n' + Cores.reset +
+                              'Se você deseja ajudar o velho, digite: ' +
+                              Cores.vermelho + 'Ajudar\n\n' + Cores.reset +
+                              "Caso queira terminar a leitura escreva: " +
+                              Cores.vermelho + "Exit\n" + Cores.reset)
             interacao = interacao.lower()
 
             if interacao == 'seguir':
@@ -176,6 +201,9 @@ def caminho_04():
             elif interacao == 'ajudar':
                 # Caminho concluído
                 caminho_06()
+                break
+            elif interacao == 'exit':
+                saida()
                 break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
@@ -231,10 +259,12 @@ def caminho_08():
     while True:
         try:
             interacao = input('\nPegue uma moeda e jogue para o alto e agarre '
-                              'ela e veja o resultado\n\nDeu '
-                              + Cores.vermelho + 'cara ' + Cores.reset
-                              + 'ou'
-                              + Cores.verde + ' coroa?\n' + Cores.reset)
+                              'ela e veja o resultado\n\nDeu ' +
+                              Cores.vermelho + 'cara ' + Cores.reset +
+                              'ou' +
+                              Cores.verde + ' coroa?\n\n' + Cores.reset +
+                              "Caso queira terminar a leitura escreva: " +
+                              Cores.vermelho + "Exit\n" + Cores.reset)
             interacao = interacao.lower()
 
             if interacao == 'cara':
@@ -244,6 +274,9 @@ def caminho_08():
             elif interacao == 'coroa':
                 # Caminho concluído
                 caminho_10()
+                break
+            elif interacao == 'exit':
+                saida()
                 break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
@@ -264,11 +297,14 @@ def caminho_09():
     while True:
         try:
             interacao = input('\nVocê decide deixar suas coisa e ir atrás do '
-                              'homem alto? digite, '
-                              + Cores.verde + 'deixar\n\n' + Cores.reset
-                              + 'Você decide recolher suas coisas? digite, '
-                              + Cores.vermelho + 'recolher\n' + Cores.reset)
+                              'homem alto? digite, ' +
+                              Cores.verde + 'deixar\n\n' + Cores.reset +
+                              'Você decide recolher suas coisas? digite, ' +
+                              Cores.vermelho + 'recolher\n\n' + Cores.reset +
+                              "Caso queira terminar a leitura escreva: " +
+                              Cores.vermelho + "Exit\n" + Cores.reset)
             interacao = interacao.lower()
+
             if interacao == 'deixar':
                 # Caminho concluído
                 caminho_11()
@@ -276,6 +312,9 @@ def caminho_09():
             elif interacao == 'recolher':
                 # Caminho concluído
                 caminho_12()
+                break
+            elif interacao == 'exit':
+                saida()
                 break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
@@ -293,11 +332,14 @@ def caminho_10():
     paginas.texto(9)
     while True:
         try:
-            interacao = input('\nSe quiser abrir digite '
-                              + Cores.verde + 'sim' + Cores.reset
-                              + ', se quiser deixar fechada digite '
-                              + Cores.vermelho + 'não.' + Cores.reset)
+            interacao = input('\nSe quiser abrir digite ' +
+                              Cores.verde + 'sim' + Cores.reset +
+                              ', se quiser deixar fechada digite ' +
+                              Cores.vermelho + 'não.\n\n' + Cores.reset +
+                              "Caso queira terminar a leitura escreva: " +
+                              Cores.vermelho + "Exit\n" + Cores.reset)
             interacao = interacao.lower()
+
             if interacao == 'sim':
                 # Caminho concluído
                 caminho_15()
@@ -305,6 +347,9 @@ def caminho_10():
             elif interacao == 'não' or interacao == 'nao':
                 # Caminho concluído
                 caminho_16()
+                break
+            elif interacao == 'exit':
+                saida()
                 break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
@@ -324,11 +369,14 @@ def caminho_11():
     while True:
         try:
             interacao = input('\nO primeiro desenho é a cruz Egípcia\n'
-                              'O segundo é o urubu\n Qual você escolhe? '
-                              + Cores.vermelho + 'Cruz ' + Cores.reset
-                              + 'ou '
-                              + Cores.verde + 'Urubu.\n' + Cores.reset)
+                              'O segundo é o urubu\n Qual você escolhe? ' +
+                              Cores.vermelho + 'Cruz ' + Cores.reset +
+                              'ou ' +
+                              Cores.verde + 'Urubu.\n\n' + Cores.reset +
+                              "Caso queira terminar a leitura escreva: " +
+                              Cores.vermelho + "Exit\n" + Cores.reset)
             interacao = interacao.lower()
+
             if interacao == 'cruz':
                 # Caminho concluído
                 caminho_13()
@@ -336,6 +384,9 @@ def caminho_11():
             elif interacao == 'urubu':
                 # Caminho concluído
                 caminho_14()
+                break
+            elif interacao == 'exit':
+                saida()
                 break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
@@ -404,10 +455,12 @@ def caminho_16():
     paginas.texto(58)
     while True:
         try:
-            interacao = input('\nSe você chegou no tesouro digite, '
-                              + Cores.vermelho + 'tesouro.\n' + Cores.reset
-                              + 'Se você chegou no beco sem saída digite, '
-                              + Cores.verde + 'beco.\n' + Cores.reset)
+            interacao = input('\nSe você chegou no tesouro digite, ' +
+                              Cores.vermelho + 'tesouro.\n' + Cores.reset +
+                              'Se você chegou no beco sem saída digite, ' +
+                              Cores.verde + 'beco.\n\n' + Cores.reset +
+                              "Caso queira terminar a leitura escreva: " +
+                              Cores.vermelho + "Exit\n" + Cores.reset)
             interacao = interacao.lower()
 
             if interacao == 'tesouro':
@@ -417,6 +470,9 @@ def caminho_16():
             elif interacao == 'beco':
                 # Caminho concluído
                 caminho_18()
+                break
+            elif interacao == 'exit':
+                saida()
                 break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
@@ -471,12 +527,15 @@ def caminho_20():
     paginas.texto(37)
     while True:
         try:
-            interacao = input('\nSe você deseja continuar correndo, digite: '
-                              + Cores.verde + 'Correr\n' + Cores.reset
-                              + 'Se você deseja ver quem está de seguindo, '
-                                'digite: '
-                              + Cores.vermelho + 'Olhar\n' + Cores.reset)
+            interacao = input('\nSe você deseja continuar correndo, digite: ' +
+                              Cores.verde + 'Correr\n' + Cores.reset +
+                              'Se você deseja ver quem está de seguindo, ' 
+                              'digite: ' +
+                              Cores.vermelho + 'Olhar\n\n' + Cores.reset +
+                              "Caso queira terminar a leitura escreva: " +
+                              Cores.vermelho + "Exit\n" + Cores.reset)
             interacao = interacao.lower()
+
             if interacao == 'correr':
                 # Caminho concluído
                 caminho_21()
@@ -484,6 +543,9 @@ def caminho_20():
             elif interacao == 'olhar':
                 # Caminho concluído
                 caminho_22()
+                break
+            elif interacao == 'exit':
+                saida()
                 break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
@@ -512,10 +574,12 @@ def caminho_22():
     paginas.texto(42)
     while True:
         try:
-            interacao = input('\nSe você acha que vai ser ouvido, digite: '
-                              + Cores.verde + 'Sim\n' + Cores.reset
-                              + 'Se você acha que não vai ser ouvido, Digite: '
-                              + Cores.vermelho + 'Não\n' + Cores.reset)
+            interacao = input('\nSe você acha que vai ser ouvido, digite: ' +
+                              Cores.verde + 'Sim\n' + Cores.reset +
+                              'Se você acha que não vai ser ouvido, Digite:' +
+                              Cores.vermelho + ' Não\n\n' + Cores.reset +
+                              "Caso queira terminar a leitura escreva: " +
+                              Cores.vermelho + "Exit\n" + Cores.reset)
             interacao = interacao.lower()
 
             if interacao == 'sim':
@@ -525,6 +589,9 @@ def caminho_22():
             elif interacao == 'não' or interacao == 'nao':
                 # Caminho concluído
                 caminho_24()
+                break
+            elif interacao == 'exit':
+                saida()
                 break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
@@ -558,3 +625,8 @@ def caminho_24():
     os.system('pause')
     apagar()
     return
+
+
+def saida():
+    print('Esperamos você em um outro momento, até breve :)')
+    os.system('pause')
