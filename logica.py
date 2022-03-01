@@ -145,6 +145,7 @@ def caminho_03():
                 continue
         except ValueError:
             print('Erro')
+            break
         return
 
 
@@ -152,19 +153,30 @@ def caminho_03():
 def caminho_04():
     paginas.texto(14)
     paginas.texto(15)
-    interacao = input('\nSe você deseja perseguir Farrel, digite: '
-                      + Cores.verde + 'Seguir\n\n' + Cores.reset
-                      + 'Se você deseja ajudar o velho, digite: '
-                      + Cores.vermelho + 'Ajudar\n' + Cores.reset)
-    interacao = interacao.lower()
+    while True:
+        try:
+            interacao = input('\nSe você deseja perseguir Farrel, digite: '
+                              + Cores.verde + 'Seguir\n\n' + Cores.reset
+                              + 'Se você deseja ajudar o velho, digite: '
+                              + Cores.vermelho + 'Ajudar\n' + Cores.reset)
+            interacao = interacao.lower()
 
-    if interacao == 'seguir':
-        # Caminho concluído
-        caminho_05()
-    else:
-        # Caminho concluído
-        caminho_06()
-    return
+            if interacao == 'seguir':
+                # Caminho concluído
+                caminho_05()
+            elif interacao == 'ajudar':
+                # Caminho concluído
+                caminho_06()
+            else:
+                print(f'Você escolheu "{interacao}", esse não é um '
+                      f'caminho valido :(\n'
+                      f'Digite um caminho válido, escolha entre Seguir ou '
+                      f'Ajudar\n')
+                continue
+        except ValueError:
+            print('Erro')
+            break
+        return
 
 
 # Caminho concluído
