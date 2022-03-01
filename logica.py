@@ -291,17 +291,28 @@ def caminho_09():
 
 def caminho_10():
     paginas.texto(9)
-    interacao = input('\nSe quiser abrir digite '
-                      + Cores.verde + 'sim' + Cores.reset
-                      + ', se quiser deixar fechada digite '
-                      + Cores.vermelho + 'não.' + Cores.reset)
-    interacao = interacao.lower()
-    if interacao == 'sim':
-        # Caminho concluído
-        caminho_15()
-    else:
-        # Caminho concluído
-        caminho_16()
+    while True:
+        try:
+            interacao = input('\nSe quiser abrir digite '
+                              + Cores.verde + 'sim' + Cores.reset
+                              + ', se quiser deixar fechada digite '
+                              + Cores.vermelho + 'não.' + Cores.reset)
+            interacao = interacao.lower()
+            if interacao == 'sim':
+                # Caminho concluído
+                caminho_15()
+            elif interacao == 'não' or interacao == 'nao':
+                # Caminho concluído
+                caminho_16()
+            else:
+                print(f'Você escolheu "{interacao}", esse não é um '
+                      f'caminho valido :(\n'
+                      f'Digite um caminho válido, escolha entre Sim ou '
+                      f'Não\n')
+                continue
+        except ValueError:
+            print('Erro')
+            break
     return
 
 
