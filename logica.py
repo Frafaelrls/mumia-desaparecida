@@ -253,6 +253,7 @@ def caminho_08():
                 continue
         except ValueError:
             print('Erro')
+            break
     return
 
 
@@ -260,18 +261,31 @@ def caminho_09():
     paginas.texto(44)
     paginas.texto(45)
     paginas.texto(46)
-    intercao = input('\nVocê decide deixar suas coisa e ir atrás do homem '
-                     'alto? digite, '
-                     + Cores.verde + 'deixar\n\n' + Cores.reset
-                     + 'Você decide recolher suas coisas? digite, '
-                     + Cores.vermelho + 'recolher\n' + Cores.reset)
-    intercao = intercao.lower()
-    if intercao == 'deixar':
-        # Caminho concluído
-        caminho_11()
-    else:
-        # Caminho concluído
-        caminho_12()
+    while True:
+        try:
+            interacao = input('\nVocê decide deixar suas coisa e ir atrás do '
+                              'homem alto? digite, '
+                              + Cores.verde + 'deixar\n\n' + Cores.reset
+                              + 'Você decide recolher suas coisas? digite, '
+                              + Cores.vermelho + 'recolher\n' + Cores.reset)
+            interacao = interacao.lower()
+            if interacao == 'deixar':
+                # Caminho concluído
+                caminho_11()
+                break
+            elif interacao == 'recolher':
+                # Caminho concluído
+                caminho_12()
+                break
+            else:
+                print(f'Você escolheu "{interacao}", esse não é um '
+                      f'caminho valido :(\n'
+                      f'Digite um caminho válido, escolha entre Deixar ou '
+                      f'Recolher\n')
+                continue
+        except ValueError:
+            print('Erro')
+            break
     return
 
 
