@@ -8,7 +8,9 @@ titulo = Cores.negrito + 'O mistério da Múmia Desaparecida\n\n' + Cores.reset
 introducao = """
 Você está prestes a iniciar a leitura de um livro interativo.
 Saiba que suas escolhas trarão consequências.
+
 Você possui nível suficiente para essa aventura?
+
 Digite Sim para iniciar, digite Não se precisar de mais XP.
 """
 
@@ -25,8 +27,10 @@ while True:
         resposta = input()
         resposta = resposta.lower()
         if resposta == "sim":
-            print('Que as aventuras comecem.\n')
-            time.sleep(0.0)  # todo tempo zerado para teste
+            print('Você poderá sair apenas quando for escolher um caminho, '
+                  'basta  digitar:'
+                  + Cores.vermelho + ' Exit' + Cores.reset
+                  + '\n\nQue as aventuras comecem.\n')
             os.system('pause')
             logica.leitura()
             break
