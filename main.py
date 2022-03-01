@@ -29,6 +29,7 @@ while True:
             time.sleep(0.0)  # todo tempo zerado para teste
             os.system('pause')
             logica.leitura()
+            break
         elif resposta == 'nao' or resposta == 'não':
             print('Volte quando tiver mais XP\n')
             print('Fechando o livro....\nAperte qualquer tecla para finalizar')
