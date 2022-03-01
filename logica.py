@@ -102,9 +102,9 @@ def caminho_02():
     while True:
         try:
             interacao = input('\nSe você deseja ficar digite,'
-                              + Cores.vermelho + 'Ficar\n\n' + Cores.reset
+                              + Cores.vermelho + ' ficar\n\n' + Cores.reset
                               + 'Se você deseja sair digite,'
-                              + Cores.verde + 'Sair\n' + Cores.reset)
+                              + Cores.verde + ' sair\n' + Cores.reset)
             interacao = interacao.lower()
             if interacao == 'ficar':
                 # Caminho concluído
@@ -301,9 +301,11 @@ def caminho_10():
             if interacao == 'sim':
                 # Caminho concluído
                 caminho_15()
+                break
             elif interacao == 'não' or interacao == 'nao':
                 # Caminho concluído
                 caminho_16()
+                break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
                       f'caminho valido :(\n'
@@ -330,9 +332,11 @@ def caminho_11():
             if interacao == 'cruz':
                 # Caminho concluído
                 caminho_13()
+                break
             elif interacao == 'urubu':
                 # Caminho concluído
                 caminho_14()
+                break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
                       f'caminho valido :(\n'
@@ -409,9 +413,11 @@ def caminho_16():
             if interacao == 'tesouro':
                 # Caminho concluído
                 caminho_17()
+                break
             elif interacao == 'beco':
                 # Caminho concluído
                 caminho_18()
+                break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
                       f'caminho valido :(\n'
@@ -466,7 +472,7 @@ def caminho_20():
     while True:
         try:
             interacao = input('\nSe você deseja continuar correndo, digite: '
-                              + Cores.verde + 'correr\n' + Cores.reset
+                              + Cores.verde + 'Correr\n' + Cores.reset
                               + 'Se você deseja ver quem está de seguindo, '
                                 'digite: '
                               + Cores.vermelho + 'Olhar\n' + Cores.reset)
@@ -474,9 +480,11 @@ def caminho_20():
             if interacao == 'correr':
                 # Caminho concluído
                 caminho_21()
+                break
             elif interacao == 'olhar':
                 # Caminho concluído
                 caminho_22()
+                break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
                       f'caminho valido :(\n'
@@ -513,9 +521,11 @@ def caminho_22():
             if interacao == 'sim':
                 # Caminho concluído
                 caminho_23()
+                break
             elif interacao == 'não' or interacao == 'nao':
                 # Caminho concluído
                 caminho_24()
+                break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
                       f'caminho valido :(\n'
