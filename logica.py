@@ -319,18 +319,30 @@ def caminho_10():
 # Caminho concluído
 def caminho_11():
     paginas.texto(13)
-    interacao = input('\nO primeiro desenho é a cruz Egípcia\nO '
-                      'segundo é o urubu\n Qual você escolhe? '
-                      + Cores.vermelho + 'Cruz ' + Cores.reset
-                      + 'ou '
-                      + Cores.verde + 'Urubu.\n' + Cores.reset)
-    interacao = interacao.lower()
-    if interacao == 'cruz':
-        # Caminho concluído
-        caminho_13()
-    else:
-        # Caminho concluído
-        caminho_14()
+    while True:
+        try:
+            interacao = input('\nO primeiro desenho é a cruz Egípcia\n'
+                              'O segundo é o urubu\n Qual você escolhe? '
+                              + Cores.vermelho + 'Cruz ' + Cores.reset
+                              + 'ou '
+                              + Cores.verde + 'Urubu.\n' + Cores.reset)
+            interacao = interacao.lower()
+            if interacao == 'cruz':
+                # Caminho concluído
+                caminho_13()
+            elif interacao == 'urubu':
+                # Caminho concluído
+                caminho_14()
+            else:
+                print(f'Você escolheu "{interacao}", esse não é um '
+                      f'caminho valido :(\n'
+                      f'Digite um caminho válido, escolha entre Cruz ou '
+                      f'Urubu\n')
+                continue
+        except ValueError:
+            print('Erro')
+            break
+    return
 
 
 # Caminho concluído
