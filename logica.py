@@ -207,11 +207,7 @@ def caminho_05():
     paginas.texto(43)
     paginas.texto(32)
     paginas.texto(33)
-    apagar()
-    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
-          'Reinicie o jogo para se aventurar com outras possibilidades.')
-    os.system('pause')
-    apagar()
+    final()
     return
 
 
@@ -219,11 +215,7 @@ def caminho_05():
 def caminho_06():
     paginas.texto(20)
     paginas.texto(21)
-    apagar()
-    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
-          'Reinicie o jogo para se aventurar com outras possibilidades.')
-    os.system('pause')
-    apagar()
+    final()
     return
 
 
@@ -231,11 +223,7 @@ def caminho_06():
 def caminho_07():
     paginas.texto(10)
     paginas.texto(12)
-    apagar()
-    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
-          'Reinicie o jogo para se aventurar com outras possibilidades.')
-    os.system('pause')
-    apagar()
+    final()
     return
 
 
@@ -379,22 +367,14 @@ def caminho_12():
     paginas.texto(53)
     paginas.texto(54)
     paginas.texto(56)
-    apagar()
-    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
-          'Reinicie o jogo para se aventurar com outras possibilidades.')
-    os.system('pause')
-    apagar()
+    final()
     return
 
 
 # Caminho concluído
 def caminho_13():
     paginas.texto(39)
-    apagar()
-    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
-          'Reinicie o jogo para se aventurar com outras possibilidades.')
-    os.system('pause')
-    apagar()
+    final()
     return
 
 
@@ -402,22 +382,14 @@ def caminho_13():
 def caminho_14():
     paginas.texto(22)
     paginas.texto(23)
-    apagar()
-    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
-          'Reinicie o jogo para se aventurar com outras possibilidades.')
-    os.system('pause')
-    apagar()
+    final()
     return
 
 
 # Caminho concluído
 def caminho_15():
     paginas.texto(16)
-    apagar()
-    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
-          'Reinicie o jogo para se aventurar com outras possibilidades.')
-    os.system('pause')
-    apagar()
+    final()
     return
 
 
@@ -429,7 +401,7 @@ def caminho_16():
     while True:
         try:
             interacao = input('\nSe você chegou no tesouro digite, ' +
-                              Cores.vermelho + 'tesouro.\n' + Cores.reset +
+                              Cores.vermelho + 'tesouro.\n\n' + Cores.reset +
                               'Se você chegou no beco sem saída digite, ' +
                               Cores.verde + 'beco.\n\n' + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
@@ -459,22 +431,14 @@ def caminho_16():
 # Caminho concluído
 def caminho_17():
     paginas.texto(31)
-    apagar()
-    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
-          'Reinicie o jogo para se aventurar com outras possibilidades.')
-    os.system('pause')
-    apagar()
+    final()
     return
 
 
 # Caminho concluído
 def caminho_18():
     paginas.texto(36)
-    apagar()
-    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
-          'Reinicie o jogo para se aventurar com outras possibilidades.')
-    os.system('pause')
-    apagar()
+    final()
     return
 
 
@@ -485,11 +449,7 @@ def caminho_19():
     paginas.texto(28)
     paginas.texto(29)
     paginas.texto(30)
-    apagar()
-    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
-          'Reinicie o jogo para se aventurar com outras possibilidades.')
-    os.system('pause')
-    apagar()
+    final()
     return
 
 
@@ -498,7 +458,7 @@ def caminho_20():
     while True:
         try:
             interacao = input('\nSe você deseja continuar correndo, digite: ' +
-                              Cores.verde + 'Correr\n' + Cores.reset +
+                              Cores.verde + 'Correr\n\n' + Cores.reset +
                               'Se você deseja ver quem está de seguindo, ' 
                               'digite: ' +
                               Cores.vermelho + 'Olhar\n\n' + Cores.reset +
@@ -529,10 +489,7 @@ def caminho_20():
 # Caminho concluído
 def caminho_21():
     paginas.texto(38)
-    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
-          'Reinicie o jogo para se aventurar com outras possibilidades.')
-    os.system('pause')
-    apagar()
+    final()
     return
 
 
@@ -542,7 +499,7 @@ def caminho_22():
     while True:
         try:
             interacao = input('\nSe você acha que vai ser ouvido, digite: ' +
-                              Cores.verde + 'Sim\n' + Cores.reset +
+                              Cores.verde + 'Sim\n\n' + Cores.reset +
                               'Se você acha que não vai ser ouvido, Digite:' +
                               Cores.vermelho + ' Não\n\n' + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
@@ -572,10 +529,7 @@ def caminho_22():
 # Caminho concluído
 def caminho_23():
     paginas.texto(48)
-    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
-          'Reinicie o jogo para se aventurar com outras possibilidades.')
-    os.system('pause')
-    apagar()
+    final()
     return
 
 
@@ -584,10 +538,7 @@ def caminho_24():
     paginas.texto(49)
     paginas.texto(50)
     paginas.texto(57)
-    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
-          'Reinicie o jogo para se aventurar com outras possibilidades.')
-    os.system('pause')
-    apagar()
+    final()
     return
 
 
@@ -600,3 +551,11 @@ def caminho_invalido(interacao):
     apagar()
     print('Você escolheu ' + Cores.vermelho + f'"{interacao}"' + Cores.reset +
           ',esse não é um caminho válido :(\nDigite um caminho válido.')
+
+
+def final():
+    apagar()
+    print('Você chegou ao final de uma aventura esperamos que tenha gostado.\n'
+          'Reinicie o jogo para se aventurar com outras possibilidades.')
+    os.system('pause')
+    apagar()
