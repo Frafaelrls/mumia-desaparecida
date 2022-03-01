@@ -9,6 +9,7 @@ import colorama
 
 import paginas
 # Biblioteca colorama não é nativa do sistema
+# Funciona apenas com versão igual o inferior a 3,8
 
 
 class Cores:
@@ -47,10 +48,11 @@ def leitura():
             if interacao == 'seguir':
                 # Caminho Concluído
                 caminho_01()
-
+                break
             elif interacao == 'espiar':
                 # Caminho concluído
                 caminho_02()
+                break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
                       f'caminho valido :(\n'
@@ -60,7 +62,7 @@ def leitura():
         except ValueError:
             print('Erro')
             break
-        return
+    return
 
 
 # Caminho concluído
@@ -78,9 +80,11 @@ def caminho_01():
             if interacao == 'policia' or interacao == 'polícia':
                 # Caminho concluído
                 caminho_03()
+                break
             elif interacao == 'seguir':
                 # Caminho concluído
                 caminho_04()
+                break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
                       f'caminho valido :(\n'
@@ -90,7 +94,7 @@ def caminho_01():
         except ValueError:
             print('Erro')
             break
-        return
+    return
 
 
 def caminho_02():
@@ -105,9 +109,11 @@ def caminho_02():
             if interacao == 'ficar':
                 # Caminho concluído
                 caminho_19()
+                break
             elif interacao == 'sair':
                 # Caminho concluído
                 caminho_20()
+                break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
                       f'caminho valido :(\n'
@@ -117,7 +123,7 @@ def caminho_02():
         except ValueError:
             print('Erro')
             break
-        return
+    return
 
 
 def caminho_03():
@@ -134,9 +140,11 @@ def caminho_03():
             if interacao == 'mostrar':
                 # Caminho concluído
                 caminho_07()
+                break
             elif interacao == 'segredo':
                 # Caminho concluído
                 caminho_08()
+                break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
                       f'caminho valido :(\n'
@@ -146,7 +154,7 @@ def caminho_03():
         except ValueError:
             print('Erro')
             break
-        return
+    return
 
 
 # Caminho concluído
@@ -164,9 +172,11 @@ def caminho_04():
             if interacao == 'seguir':
                 # Caminho concluído
                 caminho_05()
+                break
             elif interacao == 'ajudar':
                 # Caminho concluído
                 caminho_06()
+                break
             else:
                 print(f'Você escolheu "{interacao}", esse não é um '
                       f'caminho valido :(\n'
@@ -176,7 +186,7 @@ def caminho_04():
         except ValueError:
             print('Erro')
             break
-        return
+    return
 
 
 # Caminho concluído
@@ -218,19 +228,31 @@ def caminho_07():
 
 def caminho_08():
     paginas.texto(41)
-    interacao = input('\nPegue uma moeda e jogue para o alto e agarre ela e'
-                      'veja o resultado\n\nDeu '
-                      + Cores.vermelho + 'cara ' + Cores.reset
-                      + 'ou'
-                      + Cores.verde + ' coroa?\n' + Cores.reset)
-    interacao = interacao.lower()
+    while True:
+        try:
+            interacao = input('\nPegue uma moeda e jogue para o alto e agarre '
+                              'ela e veja o resultado\n\nDeu '
+                              + Cores.vermelho + 'cara ' + Cores.reset
+                              + 'ou'
+                              + Cores.verde + ' coroa?\n' + Cores.reset)
+            interacao = interacao.lower()
 
-    if interacao == 'cara':
-        # Caminho concluído
-        caminho_09()
-    else:
-        # Caminho concluído
-        caminho_10()
+            if interacao == 'cara':
+                # Caminho concluído
+                caminho_09()
+                break
+            elif interacao == 'coroa':
+                # Caminho concluído
+                caminho_10()
+                break
+            else:
+                print(f'Você escolheu "{interacao}", esse não é um '
+                      f'caminho valido :(\n'
+                      f'Digite um caminho válido, escolha entre Cara ou '
+                      f'Coroa\n')
+                continue
+        except ValueError:
+            print('Erro')
     return
 
 
