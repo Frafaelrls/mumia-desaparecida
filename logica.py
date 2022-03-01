@@ -59,10 +59,7 @@ def leitura():
                 saida()
                 break
             else:
-                print(f'Você escolheu "{interacao}", esse não é um '
-                      f'caminho valido :(\n'
-                      f'Digite um caminho válido, escolha entre seguir ou '
-                      f'espiar\n')
+                caminho_invalido(interacao)
                 continue
         except ValueError:
             print('Erro')
@@ -97,10 +94,7 @@ def caminho_01():
                 saida()
                 break
             else:
-                print(f'Você escolheu "{interacao}", esse não é um '
-                      f'caminho valido :(\n'
-                      f'Digite um caminho válido, escolha entre Polícia ou '
-                      f'Seguir\n')
+                caminho_invalido(interacao)
                 continue
         except ValueError:
             print('Erro')
@@ -132,10 +126,7 @@ def caminho_02():
                 saida()
                 break
             else:
-                print(f'Você escolheu "{interacao}", esse não é um '
-                      f'caminho valido :(\n'
-                      f'Digite um caminho válido, escolha entre Ficar ou '
-                      f'Sair\n')
+                caminho_invalido(interacao)
                 continue
         except ValueError:
             print('Erro')
@@ -169,10 +160,7 @@ def caminho_03():
                 saida()
                 break
             else:
-                print(f'Você escolheu "{interacao}", esse não é um '
-                      f'caminho valido :(\n'
-                      f'Digite um caminho válido, escolha entre Mostrar ou '
-                      f'Segredo\n')
+                caminho_invalido(interacao)
                 continue
         except ValueError:
             print('Erro')
@@ -206,10 +194,7 @@ def caminho_04():
                 saida()
                 break
             else:
-                print(f'Você escolheu "{interacao}", esse não é um '
-                      f'caminho valido :(\n'
-                      f'Digite um caminho válido, escolha entre Seguir ou '
-                      f'Ajudar\n')
+                caminho_invalido(interacao)
                 continue
         except ValueError:
             print('Erro')
@@ -279,10 +264,7 @@ def caminho_08():
                 saida()
                 break
             else:
-                print(f'Você escolheu "{interacao}", esse não é um '
-                      f'caminho valido :(\n'
-                      f'Digite um caminho válido, escolha entre Cara ou '
-                      f'Coroa\n')
+                caminho_invalido(interacao)
                 continue
         except ValueError:
             print('Erro')
@@ -317,10 +299,7 @@ def caminho_09():
                 saida()
                 break
             else:
-                print(f'Você escolheu "{interacao}", esse não é um '
-                      f'caminho valido :(\n'
-                      f'Digite um caminho válido, escolha entre Deixar ou '
-                      f'Recolher\n')
+                caminho_invalido(interacao)
                 continue
         except ValueError:
             print('Erro')
@@ -352,10 +331,7 @@ def caminho_10():
                 saida()
                 break
             else:
-                print(f'Você escolheu "{interacao}", esse não é um '
-                      f'caminho valido :(\n'
-                      f'Digite um caminho válido, escolha entre Sim ou '
-                      f'Não\n')
+                caminho_invalido(interacao)
                 continue
         except ValueError:
             print('Erro')
@@ -389,10 +365,7 @@ def caminho_11():
                 saida()
                 break
             else:
-                print(f'Você escolheu "{interacao}", esse não é um '
-                      f'caminho valido :(\n'
-                      f'Digite um caminho válido, escolha entre Cruz ou '
-                      f'Urubu\n')
+                caminho_invalido(interacao)
                 continue
         except ValueError:
             print('Erro')
@@ -475,10 +448,7 @@ def caminho_16():
                 saida()
                 break
             else:
-                print(f'Você escolheu "{interacao}", esse não é um '
-                      f'caminho valido :(\n'
-                      f'Digite um caminho válido, escolha entre Tesouro ou '
-                      f'Beco\n')
+                caminho_invalido(interacao)
                 continue
         except ValueError:
             print('Erro')
@@ -548,10 +518,7 @@ def caminho_20():
                 saida()
                 break
             else:
-                print(f'Você escolheu "{interacao}", esse não é um '
-                      f'caminho valido :(\n'
-                      f'Digite um caminho válido, escolha entre Correr ou '
-                      f'olhar\n')
+                caminho_invalido(interacao)
                 continue
         except ValueError:
             print('Erro')
@@ -594,10 +561,7 @@ def caminho_22():
                 saida()
                 break
             else:
-                print(f'Você escolheu "{interacao}", esse não é um '
-                      f'caminho valido :(\n'
-                      f'Digite um caminho válido, escolha entre Sim ou '
-                      f'Não\n')
+                caminho_invalido(interacao)
                 continue
         except ValueError:
             print('Erro')
@@ -630,3 +594,9 @@ def caminho_24():
 def saida():
     print('Esperamos você em um outro momento, até breve :)')
     os.system('pause')
+
+
+def caminho_invalido(interacao):
+    apagar()
+    print('Você escolheu ' + Cores.vermelho + f'"{interacao}"' + Cores.reset +
+          ',esse não é um caminho válido :(\nDigite um caminho válido.')
