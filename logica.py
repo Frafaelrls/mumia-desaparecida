@@ -463,17 +463,29 @@ def caminho_19():
 
 def caminho_20():
     paginas.texto(37)
-    interacao = input('\nSe você deseja continuar correndo, digite: '
-                      + Cores.verde + 'correr\n' + Cores.reset
-                      + 'Se você deseja ver quem está de seguindo, digite: '
-                      + Cores.vermelho + 'Olhar\n' + Cores.reset)
-    interacao = interacao.lower()
-    if interacao == 'correr':
-        # Caminho concluído
-        caminho_21()
-    else:
-        # Caminho concluído
-        caminho_22()
+    while True:
+        try:
+            interacao = input('\nSe você deseja continuar correndo, digite: '
+                              + Cores.verde + 'correr\n' + Cores.reset
+                              + 'Se você deseja ver quem está de seguindo, '
+                                'digite: '
+                              + Cores.vermelho + 'Olhar\n' + Cores.reset)
+            interacao = interacao.lower()
+            if interacao == 'correr':
+                # Caminho concluído
+                caminho_21()
+            elif interacao == 'olhar':
+                # Caminho concluído
+                caminho_22()
+            else:
+                print(f'Você escolheu "{interacao}", esse não é um '
+                      f'caminho valido :(\n'
+                      f'Digite um caminho válido, escolha entre Correr ou '
+                      f'olhar\n')
+                continue
+        except ValueError:
+            print('Erro')
+            break
     return
 
 
