@@ -502,18 +502,29 @@ def caminho_21():
 def caminho_22():
     paginas.texto(40)
     paginas.texto(42)
-    interacao = input('\nSe você acha que vai ser ouvido, digite: '
-                      + Cores.verde + 'Sim\n' + Cores.reset
-                      + 'Se você acha que não vai ser ouvido, Digite: '
-                      + Cores.vermelho + 'Não\n' + Cores.reset)
-    interacao = interacao.lower()
+    while True:
+        try:
+            interacao = input('\nSe você acha que vai ser ouvido, digite: '
+                              + Cores.verde + 'Sim\n' + Cores.reset
+                              + 'Se você acha que não vai ser ouvido, Digite: '
+                              + Cores.vermelho + 'Não\n' + Cores.reset)
+            interacao = interacao.lower()
 
-    if interacao == 'sim':
-        # Caminho concluído
-        caminho_23()
-    else:
-        # Caminho concluído
-        caminho_24()
+            if interacao == 'sim':
+                # Caminho concluído
+                caminho_23()
+            elif interacao == 'não' or interacao == 'nao':
+                # Caminho concluído
+                caminho_24()
+            else:
+                print(f'Você escolheu "{interacao}", esse não é um '
+                      f'caminho valido :(\n'
+                      f'Digite um caminho válido, escolha entre Sim ou '
+                      f'Não\n')
+                continue
+        except ValueError:
+            print('Erro')
+            break
     return
 
 
