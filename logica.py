@@ -396,21 +396,31 @@ def caminho_15():
 # Caminho concluído
 def caminho_16():
     paginas.texto(24)
-    print('\n')
     paginas.texto(25)
     paginas.texto(58)
-    interacao = input('\nSe você chegou no tesouro digite, '
-                      + Cores.vermelho + 'tesouro.\n' + Cores.reset
-                      + 'Se você chegou no beco sem saída digite, '
-                      + Cores.verde + 'beco.\n' + Cores.reset)
-    interacao = interacao.lower()
+    while True:
+        try:
+            interacao = input('\nSe você chegou no tesouro digite, '
+                              + Cores.vermelho + 'tesouro.\n' + Cores.reset
+                              + 'Se você chegou no beco sem saída digite, '
+                              + Cores.verde + 'beco.\n' + Cores.reset)
+            interacao = interacao.lower()
 
-    if interacao == 'tesouro':
-        # Caminho concluído
-        caminho_17()
-    else:
-        # Caminho concluído
-        caminho_18()
+            if interacao == 'tesouro':
+                # Caminho concluído
+                caminho_17()
+            elif interacao == 'beco':
+                # Caminho concluído
+                caminho_18()
+            else:
+                print(f'Você escolheu "{interacao}", esse não é um '
+                      f'caminho valido :(\n'
+                      f'Digite um caminho válido, escolha entre Tesouro ou '
+                      f'Beco\n')
+                continue
+        except ValueError:
+            print('Erro')
+            break
     return
 
 
