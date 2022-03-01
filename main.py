@@ -28,7 +28,7 @@ while True:
         resposta = resposta.lower()
         if resposta == "sim":
             print('Você poderá sair apenas quando for escolher um caminho, '
-                  'basta  digitar:'
+                  'basta digitar:'
                   + Cores.vermelho + ' Exit' + Cores.reset
                   + '\n\nQue as aventuras comecem.\n')
             os.system('pause')
