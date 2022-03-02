@@ -42,13 +42,22 @@ class Pen(turtle.Turtle):
         self.speed(0)
 
 
+# Criando a classe do jogador
+class Player(turtle.Turtle):
+    def __init__(self):
+        turtle.Turtle.__init__(self)
+        self.shape('square')
+        self.color('blue')
+        self.penup()
+        self.speed(0)
+
 # Criando uma lista de níveis todo apagar essa parte
 levels = ['']
 
 # Definindo o layout do primeiro nível
 leve_01 = [
 "XXXXXXXXXXXXXXXXXXXXXXXXX",
-"X    XXXXXXXXXXXXXXXXXXXX",
+"XP   XXXXXXXXXXXXXXXXXXXX",
 "X    XXXXXXXXXXXXXXXXXXXX",
 "X    XXXXXXXXXXXXXXXXXXXX",
 "XXXXXXXXXXXXXXXXXXXXXXXXX",
@@ -88,13 +97,17 @@ def setup_maze(level):
                 screen_x = -288 + (x * 24)
                 screen_y = 288 - (y * 24)
                 # Checando se já existe uma parede no local
-                if character == "X":
+                if character == 'X':
                     pen.goto(screen_x, screen_y)
+                    pen.stamp()
+                if character == 'P':
+                    player.goto(screen_x, screen_y)
                     pen.stamp()
     
 
 # Criando uma instância de classe todo Descobrir o que é
 pen = Pen()
+player = Player()
 # Set up the level todo Descobrir o que é
 setup_maze(leve_01)
 
