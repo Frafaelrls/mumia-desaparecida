@@ -1,18 +1,12 @@
-"""
-- Arquivo para a lógica de funcionamento do livro;
-- Deverá conter as chamadas das funções das páginas;
-- Fornecer uma resposta para o usuário conforme suas interações;
-"""
 import os
 
-import colorama
-
 import paginas
-# Biblioteca colorama não é nativa do sistema
-# Funciona apenas com versão igual o inferior a 3,8
 
 
 class Cores:
+    # Biblioteca colorama não é nativa do sistema
+    # Funciona apenas com versão igual o inferior a 3,8
+    import colorama
     colorama.init()
     vermelho = '\033[1;31m'
     verde = '\033[1;32m'
@@ -459,7 +453,7 @@ def caminho_20():
         try:
             interacao = input('\nSe você deseja continuar correndo, digite: ' +
                               Cores.verde + 'Correr\n\n' + Cores.reset +
-                              'Se você deseja ver quem está de seguindo, ' 
+                              'Se você deseja ver quem está de seguindo, '
                               'digite: ' +
                               Cores.vermelho + 'Olhar\n\n' + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
