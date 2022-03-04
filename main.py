@@ -1,10 +1,9 @@
-import time
 import os
+import time
+
 import logica
-from logica import Cores
 
-
-titulo = Cores.negrito + 'O mistério da Múmia Desaparecida\n\n' + Cores.reset
+titulo = 'O mistério da Múmia Desaparecida\n\n'
 introducao = """
 Você está prestes a iniciar a leitura de um livro interativo.
 Saiba que suas escolhas trarão consequências.
@@ -16,7 +15,8 @@ Digite Sim para iniciar, digite Não se precisar de mais XP.
 
 for letra in titulo:
     time.sleep(0.0)  # todo tempo zerado para teste
-    print(letra, end='', flush=True)
+    print(logica.Cores.vermelho + letra + logica.Cores.reset, end='',
+          flush=True)
 
 for letra in introducao:
     time.sleep(0.0)  # todo tempo zerado para teste
@@ -29,7 +29,7 @@ while True:
         if resposta == "sim":
             print('Você poderá sair apenas quando for escolher um caminho, '
                   'basta digitar:'
-                  + Cores.vermelho + ' Exit' + Cores.reset
+                  + logica.Cores.vermelho + ' Exit' + logica.Cores.reset
                   + '\n\nQue as aventuras comecem.\n')
             os.system('pause')
             logica.leitura()
