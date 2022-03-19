@@ -25,7 +25,7 @@ for letra in introducao:
 while True:
     try:
         resposta = input()
-        resposta = resposta.lower()
+        resposta = resposta.lower().strip()
         if resposta == "sim":
             print('Você poderá sair apenas quando for escolher um caminho, '
                   'basta digitar:' +
