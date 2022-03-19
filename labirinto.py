@@ -5,7 +5,7 @@ O leitor deverá seguir pelo labirinto, o local onde terminar o jogo será o
 local onde deverá prosseguir com a história.
 
 """
-labirinto = """
+mapa = """
    ______________________________________________________________________________________________   
   │  ______________________   ______________________________   ________________________________  │  
   │ │                      │ │                              │_│                                │ │  
@@ -56,4 +56,6 @@ labirinto = """
 
 """
 
-print(labirinto)
+
+def labirinto():
+    print(mapa)
