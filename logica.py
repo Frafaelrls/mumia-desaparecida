@@ -2,6 +2,8 @@ import os
 
 import paginas
 
+import labirinto as lb
+
 
 class Cores:
     # Biblioteca colorama não é nativa do sistema
@@ -391,7 +393,8 @@ def caminho_15():
 def caminho_16():
     paginas.texto(24)
     paginas.texto(25)
-    paginas.texto(58)
+    apagar()
+    lb.labirinto()
     while True:
         try:
             interacao = input('\nSe você chegou no tesouro digite, ' +
