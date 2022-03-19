@@ -39,7 +39,7 @@ def leitura():
                               Cores.vermelho + " Espiar\n\n" + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
                               Cores.vermelho + "Exit\n" + Cores.reset)
-            interacao = interacao.lower()
+            interacao = interacao.lower().strip()
 
             if interacao == 'seguir':
                 # Caminho Concluído
@@ -74,7 +74,7 @@ def caminho_01():
                               Cores.verde + " Seguir\n\n" + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
                               Cores.vermelho + "Exit\n" + Cores.reset)
-            interacao = interacao.lower()
+            interacao = interacao.lower().strip()
 
             if interacao == 'policia' or interacao == 'polícia':
                 # Caminho concluído
@@ -106,7 +106,7 @@ def caminho_02():
                               Cores.verde + ' sair\n\n' + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
                               Cores.vermelho + "Exit\n" + Cores.reset)
-            interacao = interacao.lower()
+            interacao = interacao.lower().strip()
 
             if interacao == 'ficar':
                 # Caminho concluído
@@ -140,7 +140,7 @@ def caminho_03():
                               Cores.vermelho + ' Segredo\n\n' + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
                               Cores.vermelho + "Exit\n" + Cores.reset)
-            interacao = interacao.lower()
+            interacao = interacao.lower().strip()
 
             if interacao == 'mostrar':
                 # Caminho concluído
@@ -174,7 +174,7 @@ def caminho_04():
                               Cores.vermelho + 'Ajudar\n\n' + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
                               Cores.vermelho + "Exit\n" + Cores.reset)
-            interacao = interacao.lower()
+            interacao = interacao.lower().strip()
 
             if interacao == 'seguir':
                 # Caminho concluído
@@ -232,7 +232,7 @@ def caminho_08():
                               Cores.verde + ' coroa?\n\n' + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
                               Cores.vermelho + "Exit\n" + Cores.reset)
-            interacao = interacao.lower()
+            interacao = interacao.lower().strip()
 
             if interacao == 'cara':
                 # Caminho concluído
@@ -267,7 +267,7 @@ def caminho_09():
                               Cores.vermelho + 'recolher\n\n' + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
                               Cores.vermelho + "Exit\n" + Cores.reset)
-            interacao = interacao.lower()
+            interacao = interacao.lower().strip()
 
             if interacao == 'deixar':
                 # Caminho concluído
@@ -299,7 +299,7 @@ def caminho_10():
                               Cores.vermelho + 'não.\n\n' + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
                               Cores.vermelho + "Exit\n" + Cores.reset)
-            interacao = interacao.lower()
+            interacao = interacao.lower().strip()
 
             if interacao == 'sim':
                 # Caminho concluído
@@ -333,7 +333,7 @@ def caminho_11():
                               Cores.verde + 'Urubu.\n\n' + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
                               Cores.vermelho + "Exit\n" + Cores.reset)
-            interacao = interacao.lower()
+            interacao = interacao.lower().strip()
 
             if interacao == 'cruz':
                 # Caminho concluído
@@ -400,7 +400,7 @@ def caminho_16():
                               Cores.verde + 'beco.\n\n' + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
                               Cores.vermelho + "Exit\n" + Cores.reset)
-            interacao = interacao.lower()
+            interacao = interacao.lower().strip()
 
             if interacao == 'tesouro':
                 # Caminho concluído
@@ -458,7 +458,7 @@ def caminho_20():
                               Cores.vermelho + 'Olhar\n\n' + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
                               Cores.vermelho + "Exit\n" + Cores.reset)
-            interacao = interacao.lower()
+            interacao = interacao.lower().strip()
 
             if interacao == 'correr':
                 # Caminho concluído
@@ -498,7 +498,7 @@ def caminho_22():
                               Cores.vermelho + ' Não\n\n' + Cores.reset +
                               "Caso queira terminar a leitura escreva: " +
                               Cores.vermelho + "Exit\n" + Cores.reset)
-            interacao = interacao.lower()
+            interacao = interacao.lower().strip()
 
             if interacao == 'sim':
                 # Caminho concluído
