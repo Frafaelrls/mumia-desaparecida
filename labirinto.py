@@ -39,7 +39,7 @@ class Pen(turtle.Turtle):
         # Definindo se a caneta vai sempre tocar a folha
         self.penup()
         # Definindo a velocidade que vai criar o labirinto
-        self.speed(0)
+        self.speed(200)
 
 
 # Criando a classe do jogador
@@ -51,36 +51,53 @@ class Player(turtle.Turtle):
         self.penup()
         self.speed(0)
 
+    def go_up(self):
+        # Para subir, será adicionado 24 bits na coordenada Y
+        self.goto(self.xcor(), self.ycor() + 24)
+
+    def go_down(self):
+        # Para descer será removido 24 bits na coordenada Y
+        self.goto(self.xcor(), self.ycor() - 24)
+
+    def go_left(self):
+        # Esquerda - 24 bits na coordenada x
+        self.goto(self.xcor() - 24, self.ycor())
+
+    def go_right(self):
+        # Direita + 24 bits na coordenada X
+        self.goto(self.xcor() + 24, self.ycor())
+
+
 # Criando uma lista de níveis todo apagar essa parte
 levels = ['']
 
 # Definindo o layout do primeiro nível
 leve_01 = [
-"XXXXXXXXXXXXXXXXXXXXXXXXX",
-"XP   XXXXXXXXXXXXXXXXXXXX",
-"X    XXXXXXXXXXXXXXXXXXXX",
-"X    XXXXXXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXXXXXXXXXXX",
-"XXXXXXXX     XXXXXXXXXXXX",
-"XXXXXXXX     XXXXXXXXXXXX",
-"XXXXXXXX     XXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXXXXXXXXXXX",
-"XXXXXXXXXXXXXXXX  XXXXXXX",
-"XXXXXXXXXXXXXXXX  XXXXXXX",
-"XXXXXXXXXXXXXXXX  XXXXXXX",
-"XXXXXXXXXXXXXXXX  XXXXXXX",
-"XXXXXXXXXXXXXXXX  XXXXXXX",
-"XXXXXXXXXXXXXXXXXXXXXXXXX",
-"XXXXXXXXXXX  XXXXXXXXXXXX",
-"XXXXXXXXXXX  XXXXXXXXXXXX",
-"XXXXXXXXXXX  XXXXXXXXXXXX"
+    "XXXXXXXXXXXXXXXXXXXXXXXXX",
+    "XP   XXXXXXXXXXXXXXXXXXXX",
+    "X    XXXXXXXXXXXXXXXXXXXX",
+    "X    XXXXXXXXXXXXXXXXXXXX",
+    "XXXXXXXXXXXXXXXXXXXXXXXXX",
+    "XXXXXXXXXXXXXXXXXXXXXXXXX",
+    "XXXXXXXXXXXXXXXXXXXXXXXXX",
+    "XXXXXXXXXXXXXXXXXXXXXXXXX",
+    "XXXXXXXXXXXXXXXXXXXXXXXXX",
+    "XXXXXXXXXXXXXXXXXXXXXXXXX",
+    "XXXXXXXX     XXXXXXXXXXXX",
+    "XXXXXXXX     XXXXXXXXXXXX",
+    "XXXXXXXX     XXXXXXXXXXXX",
+    "XXXXXXXXXXXXXXXXXXXXXXXXX",
+    "XXXXXXXXXXXXXXXXXXXXXXXXX",
+    "XXXXXXXXXXXXXXXXXXXXXXXXX",
+    "XXXXXXXXXXXXXXXX  XXXXXXX",
+    "XXXXXXXXXXXXXXXX  XXXXXXX",
+    "XXXXXXXXXXXXXXXX  XXXXXXX",
+    "XXXXXXXXXXXXXXXX  XXXXXXX",
+    "XXXXXXXXXXXXXXXX  XXXXXXX",
+    "XXXXXXXXXXXXXXXXXXXXXXXXX",
+    "XXXXXXXXXXX  XXXXXXXXXXXX",
+    "XXXXXXXXXXX  XXXXXXXXXXXX",
+    "XXXXXXXXXXX  XXXXXXXXXXXX"
 ]
 
 
@@ -103,7 +120,7 @@ def setup_maze(level):
                 if character == 'P':
                     player.goto(screen_x, screen_y)
                     pen.stamp()
-    
+
 
 # Criando uma instância de classe todo Descobrir o que é
 pen = Pen()
@@ -111,3 +128,14 @@ player = Player()
 # Set up the level todo Descobrir o que é
 setup_maze(leve_01)
 
+# Iniciando o teclado
+turtle.listen()
+turtle.onkey(player.go_left, "Left")
+turtle.onkey(player.go_right, "Right")
+turtle.onkey(player.go_up, "Up")
+turtle.onkey(player.go_down, "Down")
+
+janela.tracer(0)
+
+while True:
+    janela.updade()
