@@ -28,9 +28,9 @@ while True:
         resposta = resposta.lower()
         if resposta == "sim":
             print('Você poderá sair apenas quando for escolher um caminho, '
-                  'basta digitar:'
-                  + logica.Cores.vermelho + ' Exit' + logica.Cores.reset
-                  + '\n\nQue as aventuras comecem.\n')
+                  'basta digitar:' +
+                  logica.Cores.vermelho + ' Exit' + logica.Cores.reset +
+                  '\n\nQue as aventuras comecem.\n')
             os.system('pause')
             logica.leitura()
             break
