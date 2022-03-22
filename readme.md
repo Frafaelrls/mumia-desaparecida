@@ -1,7 +1,7 @@
 # O Mistério da Múmia Desaparecida
 
 ### Apresentação
-Livro publicado pela autora `McMullan, Kate` originalmente nos Estados unidos 
+Livro publicado pela autora `McMullan, Kate` originalmente nos Estados Unidos 
 no ano de 1984 com o título `The Mystery of the Missing Mummy` sua distribuição
 no Brasil foi realizada pela editora `Ediouro` no ano de 1985 com a tradução de
 `Cornélia Dias d'Aguiar`.
@@ -40,13 +40,13 @@ Significado das cores:
 Páginas que são desenvolvidas sem a interação com o usuário. 
 <br>
 <font color=yellow> Amarelo: </font> Páginas onde haverá a interação com o 
-    usuário.
+usuário.
 <br>
 <font color=red> Vermelho: </font> Páginas de final de história.
 
 <br>
 
-![diagrama](https://user-images.githubusercontent.com/98472557/152702065-f7a24de8-f989-42ad-b48f-49bc3ee7880e.jpg)
+![diagrama](https://user-images.githubusercontent.com/98472557/159562367-479599a7-1193-4f57-a69c-c1be66767a3e.jpg)
 
 </details>
 <br>
@@ -55,7 +55,7 @@ Páginas que são desenvolvidas sem a interação com o usuário.
     <summary>
         <big>
             <strong>
-                Livros da serie 'Agora Você Decide' - Infantil
+                Livros da série 'Agora Você Decide' - Infantil
             </strong>
         </big>
     </summary>
