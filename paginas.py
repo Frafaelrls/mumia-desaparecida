@@ -6,7 +6,6 @@ import time
 def texto(numero):
     import logica
     logica.apagar()
-    print(f"Texto da página {numero}")
     numero = str(numero)
     with open(r'txt\pagina ' + numero + '.txt', 'r', encoding='utf-8') as \
             pagina:
